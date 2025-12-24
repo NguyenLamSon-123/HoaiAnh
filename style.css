@@ -1,163 +1,88 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box}
 
-/* ===== BACKGROUND ===== */
-body {
-    min-height: 100vh;
+body{
+    min-height:100vh;
     background:
-        linear-gradient(rgba(25,8,15,0.65), rgba(25,8,15,0.75)),
-        url("anhbackground.jpg") center / cover no-repeat;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    color: white;
-    overflow: hidden;
+      linear-gradient(rgba(25,8,15,.7),rgba(25,8,15,.8)),
+      url("anhbackground.jpg") center/cover no-repeat;
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    color:#fff;
+    overflow:hidden;
 }
 
-/* ===== ĐÈN NOEL ===== */
-.lights {
-    position: fixed;
-    top: 8px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 14px;
-    z-index: 5;
+/* ĐÈN NOEL */
+.lights{
+    position:fixed;top:8px;width:100%;
+    display:flex;justify-content:center;gap:14px;z-index:5
 }
-.lights span {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: red;
-    animation: blink 3s infinite alternate;
+.lights span{
+    width:8px;height:8px;border-radius:50%;
+    background:red;animation:blink 3s infinite alternate
 }
-.lights span:nth-child(even) {
-    background: gold;
-    animation-delay: 1.5s;
+.lights span:nth-child(even){
+    background:gold;animation-delay:1.5s
 }
 
-/* ===== TUYẾT ===== */
-.snowflake {
-    position: fixed;
-    top: -10px;
-    color: white;
-    font-size: 16px;
-    opacity: 0.8;
-    pointer-events: none;
-    animation: fall linear infinite;
+/* TUYẾT */
+.snowflake{
+    position:fixed;top:-10px;
+    color:white;font-size:14px;
+    animation:fall linear infinite;
+    pointer-events:none;opacity:.8
 }
 
-/* ===== MÀN KHÓA ===== */
-.lock {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(255,255,255,0.15);
-    padding: 25px;
-    border-radius: 25px;
-    text-align: center;
-    backdrop-filter: blur(12px);
-    z-index: 10;
+/* MÀN KHÓA */
+.lock{
+    position:absolute;top:40%;left:50%;
+    transform:translate(-50%,-50%);
+    background:rgba(255,255,255,.15);
+    padding:24px;border-radius:25px;
+    text-align:center;backdrop-filter:blur(12px)
+}
+.lock input{
+    margin-top:10px;padding:8px;width:150px;
+    border-radius:20px;border:none;text-align:center
+}
+.lock button{
+    margin-left:6px;padding:8px 14px;
+    border-radius:20px;border:none;
+    background:#ff4d6d;color:#fff
 }
 
-.lock input {
-    margin-top: 8px;
-    padding: 8px;
-    width: 160px;
-    border-radius: 20px;
-    border: none;
-    text-align: center;
+/* THIỆP */
+.card{
+    position:absolute;top:50%;left:50%;
+    transform:translate(-50%,-50%);
+    background:rgba(255,255,255,.18);
+    width:380px;padding:26px;
+    border-radius:28px;text-align:center;
+    backdrop-filter:blur(18px);
+    box-shadow:0 25px 60px rgba(0,0,0,.45)
 }
-.lock button {
-    margin-left: 6px;
-    padding: 8px 14px;
-    border-radius: 20px;
-    border: none;
-    background: #ff4d6d;
-    color: white;
+.hidden{display:none}
+
+.photo{width:100%;border-radius:18px;margin-bottom:10px}
+
+button{
+    margin-top:12px;padding:10px 18px;
+    border-radius:25px;border:none;
+    background:linear-gradient(45deg,#ff4d6d,#ff8fa3);
+    color:#fff
 }
 
-/* ===== THIỆP ===== */
-.card {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(255,255,255,0.18);
-    width: 340px;
-    padding: 22px;
-    border-radius: 25px;
-    text-align: center;
-    backdrop-filter: blur(16px);
-    box-shadow: 0 25px 60px rgba(0,0,0,0.45);
-    z-index: 10;
+.typing-text,.secret{
+    line-height:1.4;
+    letter-spacing:.3px;
+    white-space:normal
 }
 
-.hidden { display: none; }
-
-.photo {
-    width: 100%;
-    border-radius: 18px;
-    margin-bottom: 10px;
+/* TIM */
+.heart{
+    position:fixed;bottom:-10px;
+    font-size:18px;animation:floatUp 6s linear forwards
 }
 
-button {
-    margin-top: 10px;
-    padding: 10px 18px;
-    border-radius: 25px;
-    border: none;
-    background: linear-gradient(45deg, #ff4d6d, #ff8fa3);
-    color: white;
-}
-
-.secret {
-    margin-top: 12px;
-    font-style: italic;
-    color: #ffe6ec;
-}
-
-/* ===== TIM BAY ===== */
-.heart {
-    position: fixed;
-    bottom: -10px;
-    font-size: 18px;
-    animation: floatUp 6s linear forwards;
-}
-
-/* ===== ANIMATION ===== */
-@keyframes fall {
-    to {
-        transform: translateY(110vh) translateX(50px);
-    }
-}
-
-@keyframes floatUp {
-    to {
-        transform: translateY(-110vh);
-        opacity: 0;
-    }
-}
-
-@keyframes blink {
-    from { opacity: 0.4; }
-    to { opacity: 1; }
-}
-
-/* FIX GIÃN DÒNG LỜI CHÚC */
-.typing-text,
-.secret {
-    line-height: 1.0;       /* Dòng vừa phải */
-    letter-spacing: 0.2px;
-    white-space: normal;     /* Không giãn dòng bất thường */
-}
-
-/* Mobile tối ưu hơn */
-@media (max-width: 768px) {
-    .typing-text,
-    .secret {
-        line-height: 1.0;
-        font-size: 15px;
-    }
-}
+/* ANIMATION */
+@keyframes fall{to{transform:translateY(110vh) translateX(60px)}}
+@keyframes floatUp{to{transform:translateY(-110vh);opacity:0}}
+@keyframes blink{from{opacity:.4}to{opacity:1}}
