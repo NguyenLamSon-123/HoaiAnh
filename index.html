@@ -6,39 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<audio id="music" loop preload="auto">
+<audio id="music" preload="auto">
     <source src="music.mp3" type="audio/mpeg">
 </audio>
 
-<!-- ĐÈN NOEL -->
 <div class="lights">
     <span></span><span></span><span></span><span></span>
     <span></span><span></span><span></span><span></span>
 </div>
 
-<!-- TUYẾT -->
-<div class="snow"></div>
+<div class="snow-container"></div>
 
-<!-- MÀN KHÓA -->
 <div id="lock" class="lock">
-    <h2 class="shake">🔒 Mở khóa trái tim</h2>
+    <h2>🔒 Mở khóa trái tim</h2>
     <p>Nhập ngày sinh của em 💖</p>
-    <input 
-        type="text" 
-        id="password" 
-        placeholder="dd/mm/yyyy"
-        inputmode="numeric"
-        autocomplete="off"
-    >
+    <input type="text" id="password" placeholder="6102007">
     <button onclick="unlock()">Mở khóa</button>
 </div>
 
-<!-- THIỆP -->
 <div id="card" class="card hidden">
-    <img src="anh-cua-chung-ta.jpg" class="photo shake">
+    <img src="anh-cua-chung-ta.jpg" class="photo">
 
     <h1 class="typing">🎄 Merry Christmas 🎄</h1>
 
@@ -53,13 +42,33 @@
     <button onclick="accept()">💌 Em đồng ý ❤️</button>
 
     <p id="secret" class="secret hidden typing-text">
-        Đây là mùa Giáng Sinh thứ 3 anh được ở bên em 🎄<br>
-        Noel này em bé bị ốm, anh thương Hoài Anh nhiều lắm 🤍<br>
-        Anh xin lỗi vì chưa thể cho em điều gì lớn lao…<br>
-        Chỉ mong em luôn cười, luôn hạnh phúc<br>
-        và luôn yêu anh nhé 💖<br>
-        Mau khỏe lại Hoài Anh nha 🫶<br>
-        Anh yêu em :3
+        Giáng Sinh năm nay, anh chỉ muốn nói rằng:<br>
+        Hoài Anh chính là món quà tuyệt vời nhất<br>
+        mà ông già Noel đã mang đến cho anh 🎄<br><br>
+
+        Trong ánh đèn lung linh và tiếng nhạc rộn ràng,<br>
+        anh mong em luôn cảm nhận được<br>
+        tình yêu chân thành mà anh dành cho em 🤍<br><br>
+
+        Chúc Hoài Anh của anh một mùa Noel<br>
+        thật an lành, hạnh phúc,<br>
+        và mỗi ngày đều ngập tràn niềm vui ✨<br><br>
+
+        Anh mong rằng bàn tay mình<br>
+        sẽ luôn được nắm lấy bàn tay em,<br>
+        cùng nhau đi qua những mùa đông lạnh giá<br>
+        và cả những mùa xuân rực rỡ phía trước 🌸<br><br>
+
+        Giáng Sinh không chỉ là khoảnh khắc để mơ ước,<br>
+        mà còn là dịp để anh hứa với em:<br>
+        sẽ luôn yêu thương, che chở<br>
+        và đồng hành cùng em trên mọi chặng đường 💖<br><br>
+
+        Chúc em yêu một Giáng Sinh ngọt ngào,<br>
+        một năm mới tràn đầy yêu thương,<br>
+        thành công và những kỷ niệm đẹp bên anh 🎁<br><br>
+
+        Anh yêu em &lt;3
     </p>
 
     <p class="signature">— Người yêu em 🎅</p>
