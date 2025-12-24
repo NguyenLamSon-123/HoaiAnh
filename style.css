@@ -1,74 +1,91 @@
-* { box-sizing: border-box; }
+*{margin:0;padding:0;box-sizing:border-box}
 
-body {
-    margin: 0;
-    min-height: 100vh;
+body{
+    min-height:100vh;
     background:
-        linear-gradient(rgba(25,8,15,0.7), rgba(25,8,15,0.85)),
+        linear-gradient(rgba(30,10,20,.7),rgba(30,10,20,.85)),
         url("anhbackground.jpg") center/cover no-repeat;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
-    color: #fff;
-    overflow: hidden;
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    color:#fff;
+    overflow:hidden;
 }
 
-.lock, .card {
-    background: rgba(255,255,255,0.18);
-    backdrop-filter: blur(18px);
-    border-radius: 26px;
-    padding: 22px;
-    text-align: center;
-    box-shadow: 0 25px 60px rgba(0,0,0,0.45);
+/* ĐÈN */
+.lights{
+    position:fixed;top:8px;width:100%;
+    display:flex;justify-content:center;gap:14px;z-index:5
+}
+.lights span{
+    width:8px;height:8px;border-radius:50%;
+    background:red;animation:blink 2.5s infinite alternate
+}
+.lights span:nth-child(even){background:gold;animation-delay:1.2s}
+
+/* TUYẾT */
+.snowflake{
+    position:fixed;top:-10px;
+    font-size:16px;opacity:.8;
+    animation:fall linear infinite;
+    pointer-events:none
 }
 
-.lock {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+/* KHÓA */
+.lock{
+    position:absolute;top:45%;left:50%;
+    transform:translate(-50%,-50%);
+    background:rgba(255,255,255,.18);
+    padding:24px;border-radius:22px;
+    text-align:center;backdrop-filter:blur(12px)
+}
+.lock input{
+    margin-top:8px;padding:8px 12px;
+    border-radius:20px;border:none;text-align:center
+}
+.lock button{
+    margin-left:6px;padding:8px 14px;
+    border-radius:20px;border:none;
+    background:#ff4d6d;color:white
 }
 
-.card {
-    width: 360px;
-    max-height: 80vh;
-    overflow-y: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+/* THIỆP */
+.card{
+    position:absolute;top:50%;left:50%;
+    transform:translate(-50%,-50%);
+    width:380px;
+    padding:26px;
+    background:rgba(255,255,255,.2);
+    border-radius:26px;
+    text-align:center;
+    backdrop-filter:blur(18px);
+    box-shadow:0 30px 60px rgba(0,0,0,.5)
+}
+.hidden{display:none}
+
+.photo{width:100%;border-radius:18px;margin-bottom:12px}
+
+h1{color:#ffd6e0}
+
+.message,.secret{
+    line-height:1.55;
+    font-size:15px;
+    margin-top:12px;
+    white-space:normal
 }
 
-.hidden { display: none; }
-
-.photo {
-    width: 100%;
-    border-radius: 18px;
-    margin-bottom: 14px;
+/* TIM */
+.heart{
+    position:fixed;bottom:-10px;
+    animation:floatUp 6s linear forwards;
+    pointer-events:none
 }
 
-button {
-    background: linear-gradient(45deg,#ff4d6d,#ff8fa3);
-    color: white;
-    border: none;
-    border-radius: 25px;
-    padding: 10px 18px;
-    margin-top: 12px;
+/* ANIMATION */
+@keyframes fall{
+    to{transform:translateY(110vh) translateX(40px)}
 }
-
-.secret p {
-    margin: 10px 0;
-    line-height: 1.6;
-    font-size: 15px;
-    opacity: 0;
-    transform: translateY(6px);
-    transition: 0.6s ease;
+@keyframes floatUp{
+    to{transform:translateY(-110vh);opacity:0}
 }
-
-.secret p.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.signature {
-    margin-top: 14px;
-    font-style: italic;
+@keyframes blink{
+    from{opacity:.4}to{opacity:1}
 }
