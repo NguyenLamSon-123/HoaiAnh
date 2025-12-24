@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<title>🎄 Noel của anh & em 🎄</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>🎄 Noel của anh & em 🎄</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <audio id="music" preload="auto" loop>
     <source src="music.mp3" type="audio/mpeg">
 </audio>
 
+<!-- ĐÈN NOEL -->
 <div class="lights">
     <span></span><span></span><span></span><span></span>
     <span></span><span></span><span></span><span></span>
 </div>
 
-<div class="snow-container"></div>
+<!-- TUYẾT -->
+<div id="snow"></div>
 
+<!-- MÀN KHÓA -->
 <div id="lock" class="lock">
     <h2>🔒 Mở khóa trái tim</h2>
     <p>Nhập ngày sinh của em 💖</p>
@@ -27,12 +29,11 @@
     <button onclick="unlock()">Mở khóa</button>
 </div>
 
+<!-- THIỆP -->
 <div id="card" class="card hidden">
-
     <img src="anh-cua-chung-ta.jpg" class="photo">
 
     <h1>🎄 Merry Christmas 🎄</h1>
-
     <p class="name">Gửi <span>Lê Hoài Anh 💖</span></p>
 
     <p class="message">
@@ -43,25 +44,9 @@
 
     <button onclick="accept()">💌 Em đồng ý ❤️</button>
 
-    <div id="secret" class="secret hidden">
-        <p>Giáng Sinh năm nay, anh chỉ muốn nói rằng:</p>
-        <p>Hoài Anh chính là món quà tuyệt vời nhất mà ông già Noel đã mang đến cho anh 🎄</p>
-        <p>Trong ánh đèn lung linh và tiếng nhạc rộn ràng,</p>
-        <p>anh mong em luôn cảm nhận được tình yêu chân thành mà anh dành cho em 🤍</p>
-        <p>Chúc Hoài Anh của anh một mùa Noel thật an lành, hạnh phúc</p>
-        <p>và mỗi ngày đều ngập tràn niềm vui ✨</p>
-        <p>Anh mong rằng bàn tay mình sẽ luôn được nắm lấy bàn tay em,</p>
-        <p>cùng nhau đi qua những mùa đông lạnh giá</p>
-        <p>và cả những mùa xuân rực rỡ phía trước 🌸</p>
-        <p>Giáng Sinh không chỉ là khoảnh khắc để mơ ước,</p>
-        <p>mà còn là dịp để anh hứa với em:</p>
-        <p>sẽ luôn yêu thương, che chở và đồng hành cùng em trên mọi chặng đường 💖</p>
-        <p>Chúc em yêu một Giáng Sinh ngọt ngào</p>
-        <p>và một năm mới tràn đầy yêu thương, thành công</p>
-        <p>cùng những kỷ niệm đẹp bên anh</p>
-        <p class="signature">— Người yêu em 🎅</p>
-    </div>
+    <div id="secret" class="secret"></div>
 
+    <p class="signature">— Người yêu em Lam Sơn 🎅</p>
 </div>
 
 <script src="script.js"></script>
