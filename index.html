@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>🎄 Noel của anh & em 🎄</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<audio id="music" loop preload="auto">
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- ĐÈN NOEL -->
+<div class="lights">
+    <span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
+</div>
+
+<!-- TUYẾT -->
+<div class="snow"></div>
+
+<!-- MÀN KHÓA -->
+<div id="lock" class="lock">
+    <h2 class="shake">🔒 Mở khóa trái tim</h2>
+    <p>Nhập ngày sinh của em 💖</p>
+    <input 
+        type="text" 
+        id="password" 
+        placeholder="dd/mm/yyyy"
+        inputmode="numeric"
+        autocomplete="off"
+    >
+    <button onclick="unlock()">Mở khóa</button>
+</div>
+
+<!-- THIỆP -->
+<div id="card" class="card hidden">
+    <img src="anh-cua-chung-ta.jpg" class="photo shake">
+
+    <h1 class="typing">🎄 Merry Christmas 🎄</h1>
+
+    <p class="name">Gửi <span>Lê Hoài Anh 💖</span></p>
+
+    <p class="message typing-text">
+        Giáng Sinh này, anh không cần quà 🎁<br>
+        Vì người anh trân trọng nhất<br>
+        đang ở ngay trước mắt rồi 🤍
+    </p>
+
+    <button onclick="accept()">💌 Em đồng ý ❤️</button>
+
+    <p id="secret" class="secret hidden typing-text">
+        Đây là mùa Giáng Sinh thứ 3 anh được ở bên em 🎄<br>
+        Noel này em bé bị ốm, anh thương Hoài Anh nhiều lắm 🤍<br>
+        Anh xin lỗi vì chưa thể cho em điều gì lớn lao…<br>
+        Chỉ mong em luôn cười, luôn hạnh phúc<br>
+        và luôn yêu anh nhé 💖<br>
+        Mau khỏe lại Hoài Anh nha 🫶<br>
+        Anh yêu em :3
+    </p>
+
+    <p class="signature">— Người yêu em 🎅</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
